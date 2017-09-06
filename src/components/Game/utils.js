@@ -79,12 +79,3 @@ export const recalculateSquares = (sq, i) => {
 
   return {match, squares}
 }
-export const initState = () => ({
-  history: [{
-    squares: generateSquares(12),
-    match: false,
-    won: false
-  }],
-  stepNumber: 0,
-  cheatMode: false
-})
