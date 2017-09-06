@@ -1,6 +1,7 @@
 import React from 'react'
 import './Game.css'
 import Board from '../Board/Board'
+import History from './components/History/History'
 
 import {
   recalculateSquares,
@@ -20,27 +21,18 @@ const initState = () => ({
 })
 
 const Game = ({handleClick, handleNewGame, jumpTo, history, stepNumber}) => {
-
-  const current = history[stepNumber]
-  const moves = history.map((step, move) => {
-    let desc = move ? 'Move #' + move : 'Game start'
-    desc += step.match ? ' - match found' : ''
-    desc += step.won ? ' - you won!' : ''
-
-    return <li key={move}><a href="#" onClick={() => jumpTo(move)}>{desc}</a></li>
-  })
-  
+  const {squares} = history[stepNumber]
   return (
     <div className="game">
       <div className="game-board">
         <Board
           onClick={i => handleClick(i)}
-          squares={current.squares}
+          squares={squares}
         />
       </div>
       <div className="game-info">
         <button onClick={handleNewGame}>New game</button>
-        <ol>{moves}</ol>
+        <History history={history} jumpTo={jumpTo}/>
       </div>
     </div>
   )
