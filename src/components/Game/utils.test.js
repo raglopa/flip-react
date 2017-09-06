@@ -7,66 +7,99 @@ import {
   getFlippedAndNotFoundSquares,
   isSquareMatch,
   flipBackAllNotFound,
-  initState,
   flipSquare
 } from './utils'
 
 describe('markFoundFlippedSquares', () => {
-  it('should be tested', () => {
+  test('should be tested', () => {
     expect(true).toBe(false)
   })
 })
 
 describe('generateSquares', () => {
-  it('should be tested', () => {
+  test('should be tested', () => {
     expect(true).toBe(false)
   })
 })
 
 describe('shuffleArray', () => {
-  it('should be tested', () => {
+  test('should be tested', () => {
     expect(true).toBe(false)
   })
 })
 
 describe('calculateWin', () => {
-  it('should be tested', () => {
-    expect(true).toBe(false)
+  test('should return true if all squares are flipped', () => {
+    let squares = [
+      {isFound: true},
+      {isFound: true},
+      {isFound: true},
+    ]
+    expect(calculateWin(squares)).toBe(true)
+    squares = squares.concat({isFound: false})
+    expect(calculateWin(squares)).toBe(false)
   })
 })
 
 describe('getFlippedAndNotFoundSquares', () => {
-  it('should be tested', () => {
+  test('should be tested', () => {
     expect(true).toBe(false)
   })
 })
 
 describe('isSquareMatch', () => {
-  it('should be tested', () => {
-    expect(true).toBe(false)
+  test('should return true if the squares match', () => {
+    const caseNotMatch = [
+      {value: 'A'},
+      {value: 'B'},
+      ]
+    const caseMatch = [
+      {value: 'A'},
+      {value: 'A'}
+      ]
+
+    expect(isSquareMatch(caseNotMatch)).toBe(false)
+    expect(isSquareMatch(caseMatch)).toBe(true)
   })
 })
 
 describe('flipBackAllNotFound', () => {
-  it('should be tested', () => {
+  test('should be tested', () => {
     expect(true).toBe(false)
   })
 })
 
 describe('initState', () => {
-  it('should be tested', () => {
+  test('should be tested', () => {
     expect(true).toBe(false)
   })
 })
 
 describe('flipSquare', () => {
-  it('should be tested', () => {
-    expect(true).toBe(false)
+  test.only('should return squares with the toggled square', () => {
+    const squares = [
+      {isFlipped: false},
+      {isFlipped: false},
+      {isFlipped: true},
+      {isFlipped: false}
+    ]
+
+    let expected = [
+      {isFlipped: false},
+      {isFlipped: false},
+      {isFlipped: false},
+      {isFlipped: true}
+    ]
+
+    let changed = {foo:'bar'}
+
+    expect(changed).toEqual(expected)
+    expect(flipSquare(squares, 2)).not.toEqual(squares)
   })
 })
 
 describe('recalculateSquares', () => {
-  it('should be tested', () => {
+  test('should be tested', () => {
     expect(true).toBe(false)
   })
 })
