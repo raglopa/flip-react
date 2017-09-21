@@ -1,15 +1,33 @@
 import React from 'react'
 import './style.css'
+import classNames from 'classnames'
 
-const Square = ({onClick, value}) => (
-  <button
-    className={'square ' + (value.isFound ? 'found' : '')}
-    onClick={onClick}>
-    {value.isFlipped &&
-    <span>{value.value}</span>}
-    {!value.isFlipped &&
-    <span style={{opacity: 0.1}}>{value.value}</span>}
-  </button>
-)
+const Square = ({
+                  onClick,
+                  isFound,
+                  isFlipped,
+                  value
+                }) => {
+  const squareClass = classNames({
+    square: true,
+    found: isFound
+  })
+
+  return (
+    <div className={squareClass}>
+      {isFlipped
+        ? (
+          <div>
+            <span>{value}</span>
+          </div>
+        ) : (
+          <div onClick={onClick}>
+            <span style={{opacity: 0.1}}>{value}</span>
+          </div>
+        )
+      }
+    </div>
+  )
+}
 
 export default Square

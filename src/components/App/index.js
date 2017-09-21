@@ -4,7 +4,7 @@ import { startNewGame, triggerSquare, triggerHistoryJump } from './actions'
 import './style.css'
 
 import Board from '../Board'
-import History from './components/History'
+import History from '../History'
 
 const App = ({game}) => {
   const {squares} = game.history[game.stepNumber]
@@ -13,7 +13,7 @@ const App = ({game}) => {
       <div className="game">
         <div className="game-board">
           <Board
-            onClick={i => {store.dispatch(triggerSquare(i))}}
+            onSquareClick={i => {store.dispatch(triggerSquare(i))}}
             squares={squares}
           />
         </div>

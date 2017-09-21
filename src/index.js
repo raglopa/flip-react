@@ -9,7 +9,8 @@ import store from './store'
 
 const render = () => {
   ReactDOM.render(
-    <App game={store.getState().game}
+    <App
+      {...store.getState()}
     />,
     document.getElementById('root')
   )

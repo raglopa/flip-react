@@ -10,7 +10,6 @@ export const generateSquares = (amount = DEFAULT_SQUARES) => {
   if (amount < 4 || amount > 64) amount = DEFAULT_SQUARES
   let pairs = Math.floor(amount / 2)
   pairs = pairs % 2 !== 0 ? pairs - 1 : pairs
-  console.log('pairs', pairs)
   const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'].slice(0, Math.floor(pairs))
   const doubledLetters = letters
     .map(l => [l, l])
@@ -52,7 +51,7 @@ export const isSquareMatch = squares => squares[0].value === squares[1].value
 export const flipBackAllNotFound = squares => squares.map(square => Object.assign({}, square, {isFlipped: square.isFound}))
 export const markFoundFlippedSquares = squares => squares.map(square => Object.assign({}, square, {isFound: square.isFlipped}))
 export const recalculateSquares = (sq, i) => {
-  let squares = sq.slice()
+  let squares = sq.map(square => square)
   let match = false
   if (!squares[i].isFlipped) {
 

@@ -15,27 +15,31 @@ const generateNewGame = () => ({
   stepNumber: 0
 })
 
-const game = (state = generateNewGame(), action) => {
+const INITIAL_STATE = generateNewGame()
+
+const game = (state = INITIAL_STATE, action) => {
   switch (action.type) {
 
-    case START_NEW_GAME:
+    case START_NEW_GAME: {
       return generateNewGame()
+    }
 
     case TRIGGER_SQUARE: {
       const {history, stepNumber} = state
       const {index} = action
+
       const newHistory = history.slice(0, stepNumber + 1)
       const current = newHistory[newHistory.length - 1]
-      if (current.squares[index].isFlipped) return
       const {match, squares} = recalculateSquares(current.squares, index)
       const won = calculateWin(squares)
 
       return {
-        history: newHistory.concat([Object.assign({}, current, {
+        history: newHistory.concat({
+          ...current,
           squares,
           match,
           won,
-        })]),
+        }),
         stepNumber: newHistory.length,
       }
     }
@@ -47,6 +51,7 @@ const game = (state = generateNewGame(), action) => {
         stepNumber: step
       }
     }
+
     default:
       return state
   }

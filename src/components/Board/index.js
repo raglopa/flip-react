@@ -3,18 +3,21 @@ import Square from '../Square'
 import './style.css'
 import { reStructure } from './utils'
 
-const Board = ({squares, onClick}) => (
-  <div>
-    {reStructure(squares).map((row, i) =>
-      <div className="board-row" key={i}>
-        {row.map(square => <Square
-          key={square.id}
-          value={square}
-          onClick={() => onClick(square.id)}
-        />)}
-      </div>
-    )}
-  </div>
-)
+const Board = ({squares, onSquareClick}) => {
+  const squareTable = reStructure(squares)
+  return (
+    <div>
+      {squareTable.map((row, i) =>
+        <div className="board-row" key={i}>
+          {row.map(square => <Square
+            key={square.id}
+            {...square}
+            onClick={() => onSquareClick(square.id)}
+          />)}
+        </div>
+      )}
+    </div>
+  )
+}
 
 export default Board
