@@ -1,11 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import Game from './components/Game/Game'
+import App from './components/App'
+
+import store from './store'
 
 // ========================================
 
-ReactDOM.render(
-  <Game/>,
-  document.getElementById('root')
-)
+const render = () => {
+  ReactDOM.render(
+    <App game={store.getState().game}
+    />,
+    document.getElementById('root')
+  )
+}
+store.subscribe(render)
+render()

@@ -1,6 +1,6 @@
 import React from 'react'
-import Square from '../Square/Square'
-import './Board.css'
+import Square from '../Square'
+import './style.css'
 import { reStructure } from './utils'
 
 const Board = ({squares, onClick}) => (
