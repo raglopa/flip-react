@@ -91,5 +91,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "deep-freeze": "^0.0.1"
   }
 }

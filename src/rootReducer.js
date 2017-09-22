@@ -1,6 +1,10 @@
 import { combineReducers } from 'redux'
-import appReducers from './components/App/reducers'
+import boardReducers from './components/Board/reducers'
+import topListReducers from './components/TopList/reducers'
+import gameModeReducers from './components/GameModeSelector/reducers'
 
 export default combineReducers({
-  ...appReducers
+  ...boardReducers,
+  ...topListReducers,
+  ...gameModeReducers
 })
