@@ -3,7 +3,6 @@ import {
   recalculateSquares,
   markFoundFlippedSquares,
   generateSquares,
-  shuffleArray,
   calculateWin,
   getFlippedAndNotFoundSquares,
   isSquareMatch,
@@ -117,13 +116,3 @@ describe('reStructure', ()=>{
     expect(true).toBe(false)
   })
 })*/
-
-describe('shuffleArray', () => {
-  test.only('should return an array with the same length', () => {
-    const array = [1, 2, 3, 4]
-    deepFreeze(array)
-
-    const result = shuffleArray(array)
-    expect(array.length).toBe(result.length)
-  })
-})

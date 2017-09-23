@@ -1,11 +1,12 @@
 import React from 'react'
 import './style.css'
+import { connect } from 'react-redux'
 
 import Board from '../Board'
 import TopList from '../TopList'
 import GameModeSelector from '../GameModeSelector'
 
-const App = ({}, {store}) => (
+let App = () => (
   <div className="app">
     <div className="game">
       <div className="game-board">
@@ -18,5 +19,7 @@ const App = ({}, {store}) => (
     </div>
   </div>
 )
+
+App = connect()(App)
 
 export default App

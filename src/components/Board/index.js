@@ -1,20 +1,19 @@
 import React from 'react'
-import Square from '../Square'
+import Square from './Square'
 import { connect } from 'react-redux'
 import './style.css'
 import { reStructure } from '../utils'
 import { triggerSquare } from './actions'
 
 const mapStateToProps = state => ({
-  board: state.board,
-  gameMode: state.gameMode
+  board: state.board
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   onClick: (id) => { dispatch(triggerSquare(id)) }
 })
 
-let Board = ({board, gameMode, onClick}) => {
+let Board = ({board, onClick}) => {
   const {squares, won} = board
   const squareTable = reStructure(squares)
   return (

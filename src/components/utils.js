@@ -1,3 +1,5 @@
+import {shuffle} from 'lodash'
+
 const DEFAULT_SQUARES = 8
 
 export const reStructure = (array = []) => {
@@ -25,7 +27,7 @@ export const generateSquares = (amount = DEFAULT_SQUARES) => {
     .map(l => [l, l])
     .reduce((item, acc) => acc.concat(item))
 
-  const shuffledLetters = shuffleArray(doubledLetters)
+  const shuffledLetters = shuffle(doubledLetters)
   return new Array(pairs * 2).fill(null).map((v, i) => (
     {
       isFlipped: false,
@@ -34,26 +36,6 @@ export const generateSquares = (amount = DEFAULT_SQUARES) => {
       id: i
     }
   ))
-}
-
-export const shuffleArray = array => {
-  const shuffledArray = array.slice()
-  let currentIndex = shuffledArray.length, temporaryValue, randomIndex
-
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
-
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex)
-    currentIndex -= 1
-
-    // And swap it with the current element.
-    temporaryValue = shuffledArray[currentIndex]
-    shuffledArray[currentIndex] = shuffledArray[randomIndex]
-    shuffledArray[randomIndex] = temporaryValue
-  }
-
-  return shuffledArray
 }
 
 export const calculateWin = (squares) => squares.filter(square => !square.isFound).length === 0

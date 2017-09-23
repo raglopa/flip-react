@@ -1,4 +1,4 @@
-import { TRIGGER_SQUARE, START_NEW_GAME, SELECT_GAME_MODE } from './actions'
+import { TRIGGER_SQUARE, SELECT_GAME_MODE } from './actions'
 
 import {
   recalculateSquares,
@@ -6,21 +6,17 @@ import {
   calculateWin
 } from '../utils'
 
-const generateNewGame = (mode = 16) => ({
+const initializaState = (mode = 16) => ({
   squares: generateSquares(mode),
   steps: 0,
   won: false,
   topList: {}
 })
 
-const INITIAL_STATE = generateNewGame()
+const INITIAL_STATE = initializaState()
 
 const board = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-
-    case START_NEW_GAME: {
-      return generateNewGame()
-    }
 
     case SELECT_GAME_MODE: {
       const {gameMode} = action
@@ -32,12 +28,12 @@ const board = (state = INITIAL_STATE, action) => {
     }
 
     case TRIGGER_SQUARE: {
-      const {squares, steps} = state
-      let {topList} = state
+      const {steps} = state
+      let {squares, topList} = state
       const {index} = action
-      const newSquares = recalculateSquares(squares, index)
+      squares = recalculateSquares(squares, index)
       const newSteps = steps + 1
-      const won = calculateWin(newSquares)
+      const won = calculateWin(squares)
 
       if (won && (!topList[squares.length] || newSteps < topList[squares.length])) {
         topList = {
@@ -48,7 +44,7 @@ const board = (state = INITIAL_STATE, action) => {
 
       return {
         ...state,
-        squares: newSquares,
+        squares,
         won,
         steps: newSteps,
         topList
