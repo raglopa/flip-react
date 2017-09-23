@@ -6,14 +6,15 @@ import { reStructure } from '../utils'
 import { triggerSquare } from './actions'
 
 const mapStateToProps = state => ({
-  board: state.board
+  board: state.board,
+  gameMode: state.gameMode
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   onClick: (id) => { dispatch(triggerSquare(id)) }
 })
 
-let Board = ({board, onClick}) => {
+let Board = ({board, gameMode, onClick}) => {
   const {squares, won} = board
   const squareTable = reStructure(squares)
   return (

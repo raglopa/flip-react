@@ -1,12 +1,22 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import './style.css'
 
-const TopList = () => {
+const mapStateToProps = state => ({
+  topList: state.board.topList,
+  gameMode: state.gameMode.selectedGameMode,
+})
+
+let TopList = ({topList, gameMode}) => {
   return (
     <div>
-      [TopList]
+      top score: {topList[gameMode]
+      ? topList[gameMode]
+      : (<span>no score yet</span>)}
     </div>
   )
 }
+
+TopList = connect(mapStateToProps, null)(TopList)
 
 export default TopList
