@@ -10,7 +10,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  onClick: (id) => { dispatch(triggerSquare(id)) }
+  onClick (id) { dispatch(triggerSquare(id)) }
 })
 
 let Board = ({board, onClick}) => {
