@@ -1,7 +1,7 @@
 import React from 'react'
 import Square from './Square'
 import { connect } from 'react-redux'
-import './style.css'
+import './style.scss'
 import { reStructure } from '../utils'
 import { triggerSquare } from './actions'
 
@@ -14,11 +14,10 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 })
 
 let Board = ({board, onClick}) => {
-  const {squares, won} = board
+  const {squares} = board
   const squareTable = reStructure(squares)
   return (
-    <div>
-      {won && <div>you won.</div>}
+    <div className={"Board"}>
       {squareTable.map((row, i) =>
         <div className="board-row"
              key={i}>

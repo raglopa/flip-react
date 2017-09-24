@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.css'
+import './style.scss'
 import classNames from 'classnames'
 
 const Square = ({
@@ -10,22 +10,16 @@ const Square = ({
                 }) => {
   const squareClass = classNames({
     square: true,
-    found: isFound
+    found: isFound,
+    flipped: isFlipped
   })
-
+  const divStyle = {
+    backgroundImage: `url(${require('./images/' + value + '.png')})`
+  }
   return (
-    <div className={squareClass}>
-      {isFlipped
-        ? (
-          <div>
-            <span>{value}</span>
-          </div>
-        ) : (
-          <div onClick={onClick}>
-            <span style={{opacity: 0.1}}>{value}</span>
-          </div>
-        )
-      }
+    <div className={squareClass}
+         onClick={onClick}>
+      <div className={'inner'} style={divStyle}></div>
     </div>
   )
 }

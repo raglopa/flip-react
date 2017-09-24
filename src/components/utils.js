@@ -1,5 +1,5 @@
-import {shuffle} from 'lodash'
-import {v4} from 'node-uuid'
+import { shuffle } from 'lodash'
+import { v4 } from 'node-uuid'
 
 const DEFAULT_SQUARES = 8
 
@@ -23,7 +23,20 @@ export const generateSquares = (amount = DEFAULT_SQUARES) => {
   if (amount < 4 || amount > 64) amount = DEFAULT_SQUARES
   let pairs = Math.floor(amount / 2)
   pairs = pairs % 2 !== 0 ? pairs - 1 : pairs
-  const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'].slice(0, Math.floor(pairs))
+  const letters = shuffle([
+    'angularjs',
+    'css3',
+    'html5',
+    'javascript',
+    'less',
+    'lodash',
+    'nodejs',
+    'npm',
+    'react',
+    'redux',
+    'sass',
+    'webpack'
+  ]).slice(0, Math.floor(pairs))
   const doubledLetters = letters
     .map(l => [l, l])
     .reduce((item, acc) => acc.concat(item))
@@ -71,18 +84,15 @@ export const recalculateSquares = (squares, i) => {
     if (flippedAndNotFoundSquares.length < 2) newSquares = flipSquare(newSquares, i)
 
     if (flippedAndNotFoundSquares.length === 2) {
-
-      if (match) {
-        newSquares = flipSquare(newSquares, i)
-      } else {
-        newSquares = flipBackAllNotFound(newSquares)
-      }
+      newSquares = match ? flipSquare(newSquares, i) : flipBackAllNotFound(newSquares)
     }
 
     flippedAndNotFoundSquares = getFlippedAndNotFoundSquares(newSquares)
     match = flippedAndNotFoundSquares.length === 2 && isSquareMatch(flippedAndNotFoundSquares)
 
     if (match) newSquares = markFoundFlippedSquares(newSquares)
+  } else {
+    newSquares = flipBackAllNotFound(newSquares)
   }
 
   return newSquares

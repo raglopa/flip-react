@@ -23,7 +23,8 @@ const board = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         squares: generateSquares(gameMode),
-        steps: 0
+        steps: 0,
+        won: false
       }
     }
 

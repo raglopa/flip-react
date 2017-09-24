@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.css'
+import './style.scss'
 import { connect } from 'react-redux'
 
 import Board from '../Board'
@@ -8,14 +8,12 @@ import GameModeSelector from '../GameModeSelector'
 
 let App = () => (
   <div className="app">
-    <div className="game">
-      <div className="game-board">
-        <Board/>
-      </div>
-      <div className="game-info">
-        <GameModeSelector/>
-        <TopList/>
-      </div>
+    <div className="game-board">
+      <Board/>
+    </div>
+    <div className="game-info">
+      <GameModeSelector/>
+      <TopList/>
     </div>
   </div>
 )

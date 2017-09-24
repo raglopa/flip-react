@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import './style.css'
+import './style.scss'
 
 const mapStateToProps = state => ({
   topList: state.board.topList,
