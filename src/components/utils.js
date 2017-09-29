@@ -1,5 +1,4 @@
 import { shuffle } from 'lodash'
-import { v4 } from 'node-uuid'
 
 const DEFAULT_SQUARES = 8
 
