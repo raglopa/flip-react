@@ -2,7 +2,7 @@ import React from 'react'
 import './style.scss'
 
 const Footer = () => (
-  <footer className={'Footer footer'} >
+  <footer className='Footer footer is-size-5' >
     <div className={'container'} >
       <div className={'content has-text-centered'} >
         <p >
@@ -10,7 +10,10 @@ const Footer = () => (
         </p >
         <div >
           <a className={'icon'} href={'https://github.com/raglopa/flip-react'} >
-            <i className='fa fa-2x fa-github' />
+            <i className='fa fa-2x fa-github-square' />
+          </a >
+          <a className={'icon'} href={'https://www.linkedin.com/in/attilapolgar/'} >
+            <i className='fa fa-2x fa-linkedin-square' />
           </a >
         </div >
       </div >

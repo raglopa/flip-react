@@ -12,6 +12,11 @@ const component = () => (
           <i className='fa fa-2x fa-github' />
         </span >
       </a >
+      <a className='navbar-item is-hidden-desktop' href={'https://www.linkedin.com/in/attilapolgar/'} target='_blank' >
+        <span className='icon' >
+          <i className='fa fa-2x fa-linkedin-square' />
+        </span >
+      </a >
     </div >
     <div className='navbar-menu' >
       <div className='navbar-end' >
@@ -19,6 +24,13 @@ const component = () => (
           <a className={''} href={'https://github.com/raglopa/flip-react'} target={'blank'} >
             <span className={'icon'} >
               <i className='fa fa-2x fa-github' />
+            </span >
+          </a >
+        </div >
+        <div className='navbar-item' >
+          <a className={''} href={'\'https://www.linkedin.com/in/attilapolgar/\''} target={'blank'} >
+            <span className={'icon'} >
+              <i className='fa fa-2x fa-linkedin-square' />
             </span >
           </a >
         </div >
