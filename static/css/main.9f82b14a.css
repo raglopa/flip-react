@@ -6548,7 +6548,8 @@ html {
   min-height: 100vh;
   flex-direction: column; }
   .app .content {
-    padding: 2rem 1rem; }
+    padding: 2rem 1rem;
+    flex: 1; }
     .app .content .game-board {
       display: flex;
       flex: 1;
@@ -8933,4 +8934,4 @@ html {
   overflow: visible;
   clip: auto; }
 
-/*# sourceMappingURL=main.bc41f730.css.map*/
+/*# sourceMappingURL=main.9f82b14a.css.map*/
