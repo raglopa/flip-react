@@ -9,10 +9,31 @@ const mapStateToProps = state => ({
 
 let TopList = ({topList, gameMode}) => {
   return (
-    <div >
-      top score: {topList[gameMode]
-      ? topList[gameMode]
-      : (<span >no score yet</span >)}
+    <div className='TopList'>
+      {topList[gameMode]
+        ? (
+          <div >
+            <table className='table is-striped is-narrow' >
+              <thead >
+              <tr >
+                <th >Pos</th >
+                <th >Play</th >
+                <th >Score</th >
+              </tr >
+              </thead >
+              <tbody >
+              {topList[gameMode].map((play, index) => (
+                <tr key={play.play} >
+                  <td >{index + 1}.</td >
+                  <td >{play.play}</td >
+                  <td >{play.score}</td >
+                </tr >
+              ))}
+              </tbody >
+            </table >
+          </div >
+        )
+        : (<span >no scores yet</span >)}
     </div >
   )
 }

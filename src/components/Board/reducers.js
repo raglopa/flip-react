@@ -35,10 +35,20 @@ const board = (state = INITIAL_STATE, action) => {
       const newSteps = steps + 1
       const won = calculateWin(squares)
 
-      if (won && (!topList[squares.length] || newSteps < topList[squares.length])) {
+      if (won) {
+        const list = Object.keys(topList).includes('' + squares.length) ? topList[squares.length] : []
+        const newList = [
+          ...list,
+          {
+            play: list.length,
+            score: newSteps
+          }
+        ].sort((a, b) => a.score > b.score)
+          .slice(0, 5)
+
         topList = {
           ...topList,
-          [squares.length]: newSteps
+          [squares.length]: newList
         }
       }
 
