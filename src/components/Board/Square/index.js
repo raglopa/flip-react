@@ -17,7 +17,7 @@ const Square = ({
     backgroundImage: `url(${require('./images/' + value + '.png')})`
   }
   return (
-    <div className={squareClass} onClick={onClick} >
+    <div className={squareClass} onClick={() => !isFlipped ? onClick() : () => {}} >
       <div className={'inner'} style={divStyle} />
     </div >
   )
