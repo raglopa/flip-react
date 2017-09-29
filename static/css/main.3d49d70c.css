@@ -6613,6 +6613,8 @@ html {
 
 .Hero .tags {
   justify-content: center; }
+.PlayerInput {
+  margin: 1rem 0; }
 .Footer .content {
   flex-direction: column; }
   .Footer .content .icon {
@@ -8947,4 +8949,4 @@ html {
   overflow: visible;
   clip: auto; }
 
-/*# sourceMappingURL=main.b93babe2.css.map*/
+/*# sourceMappingURL=main.3d49d70c.css.map*/
