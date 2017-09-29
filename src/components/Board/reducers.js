@@ -6,14 +6,14 @@ import {
   calculateWin
 } from '../utils'
 
-const initializaState = (mode = 16) => ({
+const initializeState = (mode = 16) => ({
   squares: generateSquares(mode),
   steps: 0,
   won: false,
   topList: {}
 })
 
-const INITIAL_STATE = initializaState()
+const INITIAL_STATE = initializeState()
 
 const board = (state = INITIAL_STATE, action) => {
   switch (action.type) {
