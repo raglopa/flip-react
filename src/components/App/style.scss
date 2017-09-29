@@ -1,20 +1,12 @@
-.app {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+.App {
 
-  .content {
-    flex: 1;
+  .game-board {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 
-    .game-board {
-      display: flex;
-      flex: 1;
-      align-items: center;
-      flex-direction: column;
-    }
-
-    @media screen and (min-width: 768px) {
-      flex-direction: row;
-    }
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
   }
 }

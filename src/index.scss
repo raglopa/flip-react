@@ -4,8 +4,16 @@
 
 html {
   font-size: 12px;
-}
 
-body{
-  font-family: 'Raleway', sans-serif;
+  body {
+    font-family: 'Raleway', sans-serif;
+    .Root {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      .content {
+        flex: 1;
+      }
+    }
+  }
 }

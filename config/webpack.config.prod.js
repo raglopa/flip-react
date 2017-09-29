@@ -123,6 +123,18 @@ module.exports = {
               name: 'static/media/[name].[hash:8].[ext]'
             }
           },
+          {
+            test: /\.md$/,
+            use: [
+              {
+                loader: 'html-loader'
+              },
+              {
+                loader: 'markdown-loader',
+                options: {}
+              }
+            ]
+          },
           // Process JS with Babel.
           {
             test: /\.(js|jsx)$/,
