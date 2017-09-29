@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import App from './App'
-import Readme from './Readme'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -13,8 +12,7 @@ const Root = ({store}) => (
       <Header />
       <Router >
         <div className='content'>
-          <Route exact path='/' component={App} />
-          <Route path='/readme' component={Readme} />
+          <Route path='/' component={App} />
         </div >
       </Router >
       <Footer />

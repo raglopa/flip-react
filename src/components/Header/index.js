@@ -7,14 +7,6 @@ const component = () => (
       <a className='navbar-item' href='/' >
         <span className='is-size-4' >flip-react</span >
       </a >
-      <a className='navbar-item is-hidden-desktop' href={'/readme'} target='_blank' >
-        <a className='button' href={'/readme'} >
-          <span className='icon' >
-            <i className='fa fa-pencil' />
-          </span >
-          <span >README</span >
-        </a >
-      </a >
       <a className='navbar-item is-hidden-desktop' href={'https://github.com/raglopa/flip-react'} target='_blank' >
         <span className='icon' >
           <i className='fa fa-2x fa-github' />
@@ -29,14 +21,6 @@ const component = () => (
     </div >
     <div className='navbar-menu' >
       <div className='navbar-end' >
-        <div className='navbar-item' >
-          <a className='button' href={'/readme'} >
-            <span className='icon' >
-              <i className='fa fa-pencil' />
-            </span >
-            <span >README</span >
-          </a >
-        </div >
         <div className='navbar-item' >
           <a className={''} href={'https://github.com/raglopa/flip-react'} target='_blank' >
             <span className={'icon'} >
