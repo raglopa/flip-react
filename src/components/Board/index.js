@@ -17,10 +17,10 @@ let Board = ({board, onClick}) => {
   const {squares} = board
   const squareTable = reStructure(squares)
   return (
-    <div className={"Board"}>
+    <div className={'Board'}>
       {squareTable.map((row, i) =>
-        <div className="board-row"
-             key={i}>
+        <div className='board-row'
+          key={i}>
           {row.map(square =>
             <Square
               key={square.id}

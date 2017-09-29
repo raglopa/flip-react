@@ -20,7 +20,7 @@ describe('generateSquares', () => {
   test('should be tested', () => {
     expect(true).toBe(false)
   })
-})*/
+}) */
 
 describe('calculateWin', () => {
   test('should return true if all squares are flipped', () => {
@@ -28,7 +28,7 @@ describe('calculateWin', () => {
       calculateWin([
         {isFound: true},
         {isFound: true},
-        {isFound: true},
+        {isFound: true}
       ]))
       .toBe(true)
 
@@ -36,10 +36,9 @@ describe('calculateWin', () => {
       calculateWin([
         {isFound: true},
         {isFound: true},
-        {isFound: false},
+        {isFound: false}
       ]))
       .toBe(false)
-
   })
 })
 /*
@@ -47,13 +46,13 @@ describe('getFlippedAndNotFoundSquares', () => {
   test('should be tested', () => {
     expect(true).toBe(false)
   })
-})*/
+}) */
 
 describe('isSquareMatch', () => {
   test('should return true if the squares match', () => {
     const caseNotMatch = [
       {value: 'A'},
-      {value: 'B'},
+      {value: 'B'}
     ]
     const caseMatch = [
       {value: 'A'},
@@ -65,7 +64,7 @@ describe('isSquareMatch', () => {
   })
 })
 
-/*describe('flipBackAllNotFound', () => {
+/* describe('flipBackAllNotFound', () => {
   test('should be tested', () => {
     expect(true).toBe(false)
   })
@@ -75,7 +74,7 @@ describe('initState', () => {
   test('should be tested', () => {
     expect(true).toBe(false)
   })
-})*/
+}) */
 
 describe('flipSquare', () => {
   test('should return squares with the flipped square', () => {
@@ -115,4 +114,4 @@ describe('reStructure', ()=>{
   test('should be awesome', ()=>{
     expect(true).toBe(false)
   })
-})*/
+}) */

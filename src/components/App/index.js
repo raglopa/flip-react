@@ -7,13 +7,13 @@ import TopList from '../TopList'
 import GameModeSelector from '../GameModeSelector'
 
 let App = () => (
-  <div className="app">
-    <div className="game-board">
-      <Board/>
+  <div className='app'>
+    <div className='game-board'>
+      <Board />
     </div>
-    <div className="game-info">
-      <GameModeSelector/>
-      <TopList/>
+    <div className='game-info'>
+      <GameModeSelector />
+      <TopList />
     </div>
   </div>
 )

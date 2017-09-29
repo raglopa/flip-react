@@ -5,7 +5,6 @@ import { throttle } from 'lodash'
 import rootReducer from './rootReducer'
 
 const configureStore = () => {
-
   const persistedState = loadState()
 
   const logger = createLogger({})

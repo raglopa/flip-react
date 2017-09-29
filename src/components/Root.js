@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
 import { MemoryRouter, Route } from 'react-router'
 import App from './App'
@@ -8,14 +8,14 @@ const Root = ({store}) => (
   <Provider store={store}>
     <MemoryRouter>
       <div>
-        <Route path='/' component={App}/>
+        <Route path='/' component={App} />
       </div>
     </MemoryRouter>
   </Provider>
 )
 
 Root.propTypes = {
-  store: PropTypes.object.isRequired,
+  store: PropTypes.object.isRequired
 }
 
 export default Root

@@ -18,8 +18,8 @@ const Square = ({
   }
   return (
     <div className={squareClass}
-         onClick={onClick}>
-      <div className={'inner'} style={divStyle}></div>
+      onClick={onClick}>
+      <div className={'inner'} style={divStyle} />
     </div>
   )
 }

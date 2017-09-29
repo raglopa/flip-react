@@ -76,7 +76,6 @@ export const recalculateSquares = (squares, i) => {
   let newSquares = squares.slice()
   let match = false
   if (!newSquares[i].isFlipped) {
-
     let flippedAndNotFoundSquares = getFlippedAndNotFoundSquares(newSquares)
     match = flippedAndNotFoundSquares.length === 2 && isSquareMatch(flippedAndNotFoundSquares)
 

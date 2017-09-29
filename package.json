@@ -5,15 +5,17 @@
   "homepage": "https://raglopa.github.io/flip-react/",
   "scripts": {
     "dev": "node scripts/start.js",
+    "prebuild": "npm run test",
     "build": "node scripts/build.js",
+    "pretest": "npm run lint",
     "test": "node scripts/test.js --env=jsdom",
     "predeploy": "npm run build",
+    "lint": "standard",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "autoprefixer": "^7.1.4",
     "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.0",
     "babel-jest": "^21.0.2",
     "babel-loader": "^7.1.2",
     "babel-preset-react-app": "^3.0.2",
@@ -23,13 +25,6 @@
     "classnames": "^2.2.5",
     "css-loader": "^0.28.7",
     "dotenv": "4.0.0",
-    "eslint": "^4.7.2",
-    "eslint-config-react-app": "^2.0.0",
-    "eslint-loader": "1.9.0",
-    "eslint-plugin-flowtype": "^2.35.1",
-    "eslint-plugin-import": "2.7.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.3.0",
     "extract-text-webpack-plugin": "3.0.0",
     "file-loader": "0.11.2",
     "fs-extra": "^4.0.2",
@@ -54,6 +49,7 @@
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "sass-loader": "^6.0.6",
+    "standard": "^10.0.3",
     "style-loader": "0.18.2",
     "sw-precache-webpack-plugin": "0.11.4",
     "url-loader": "0.5.9",
@@ -100,10 +96,17 @@
       "react-app"
     ]
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "devDependencies": {
     "deep-freeze": "^0.0.1"
+  },
+  "standard": {
+    "ignore": [
+      "*.test.js"
+    ],
+    "globals": [
+      "localStorage",
+      "URL",
+      "fetch"
+    ]
   }
 }

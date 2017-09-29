@@ -7,7 +7,7 @@ let GameModeSelector = ({gameMode, onClick}) => (
   <div>
     {gameMode.gameModes.map(mode => (
       <button key={mode}
-              onClick={() => onClick(mode)}>{mode}</button>
+        onClick={() => onClick(mode)}>{mode}</button>
     ))}
   </div>
 )

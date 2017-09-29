@@ -17,7 +17,6 @@ const INITIAL_STATE = initializaState()
 
 const board = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-
     case SELECT_GAME_MODE: {
       const {gameMode} = action
       return {
@@ -60,4 +59,3 @@ const board = (state = INITIAL_STATE, action) => {
 export default {
   board
 }
-

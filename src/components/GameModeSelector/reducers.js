@@ -25,4 +25,3 @@ const gameMode = (state = INITIAL_STATE, action) => {
 export default {
   gameMode
 }
-

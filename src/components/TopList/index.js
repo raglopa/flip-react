@@ -4,7 +4,7 @@ import './style.scss'
 
 const mapStateToProps = state => ({
   topList: state.board.topList,
-  gameMode: state.gameMode.selectedGameMode,
+  gameMode: state.gameMode.selectedGameMode
 })
 
 let TopList = ({topList, gameMode}) => {
