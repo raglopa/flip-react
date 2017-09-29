@@ -1,16 +1,16 @@
 {
   "main.css": "static/css/main.632ae878.css",
   "main.css.map": "static/css/main.632ae878.css.map",
-  "main.js": "static/js/main.6787455c.js",
-  "main.js.map": "static/js/main.6787455c.js.map",
-  "static\\media\\angularjs.png": "static/media/angularjs.54a9a152.png",
-  "static\\media\\css3.png": "static/media/css3.ce29017c.png",
-  "static\\media\\html5.png": "static/media/html5.e93e4d30.png",
-  "static\\media\\javascript.png": "static/media/javascript.03d471c6.png",
-  "static\\media\\less.png": "static/media/less.2606c154.png",
-  "static\\media\\nodejs.png": "static/media/nodejs.0c064d58.png",
-  "static\\media\\react.png": "static/media/react.f32419c5.png",
-  "static\\media\\redux.png": "static/media/redux.bd5bdb20.png",
-  "static\\media\\sass.png": "static/media/sass.74c36290.png",
-  "static\\media\\webpack.png": "static/media/webpack.eea14409.png"
+  "main.js": "static/js/main.56456d85.js",
+  "main.js.map": "static/js/main.56456d85.js.map",
+  "static/media/angularjs.png": "static/media/angularjs.54a9a152.png",
+  "static/media/css3.png": "static/media/css3.ce29017c.png",
+  "static/media/html5.png": "static/media/html5.e93e4d30.png",
+  "static/media/javascript.png": "static/media/javascript.03d471c6.png",
+  "static/media/less.png": "static/media/less.2606c154.png",
+  "static/media/nodejs.png": "static/media/nodejs.0c064d58.png",
+  "static/media/react.png": "static/media/react.f32419c5.png",
+  "static/media/redux.png": "static/media/redux.bd5bdb20.png",
+  "static/media/sass.png": "static/media/sass.74c36290.png",
+  "static/media/webpack.png": "static/media/webpack.eea14409.png"
 }
