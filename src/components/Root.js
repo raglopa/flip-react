@@ -5,13 +5,13 @@ import { MemoryRouter, Route } from 'react-router'
 import App from './App'
 
 const Root = ({store}) => (
-  <Provider store={store}>
-    <MemoryRouter>
-      <div>
+  <Provider store={store} >
+    <MemoryRouter >
+      <div >
         <Route path='/' component={App} />
-      </div>
-    </MemoryRouter>
-  </Provider>
+      </div >
+    </MemoryRouter >
+  </Provider >
 )
 
 Root.propTypes = {
