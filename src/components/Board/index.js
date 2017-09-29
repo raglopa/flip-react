@@ -6,14 +6,15 @@ import { reStructure } from '../utils'
 import { triggerSquare } from './actions'
 
 const mapStateToProps = state => ({
-  board: state.board
+  board: state.board,
+  player: state.player
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  onClick (id) { dispatch(triggerSquare(id)) }
+  onClick (id, name) { dispatch(triggerSquare(id, name)) }
 })
 
-let Board = ({board, onClick}) => {
+let Board = ({board, player, onClick}) => {
   const {squares} = board
   const squareTable = reStructure(squares)
   return (
@@ -24,7 +25,7 @@ let Board = ({board, onClick}) => {
             <Square
               key={square.id}
               {...square}
-              onClick={() => onClick(square.id)}
+              onClick={() => onClick(square.id, player.name)}
             />)}
         </div >
       )}

@@ -30,7 +30,7 @@ const board = (state = INITIAL_STATE, action) => {
     case TRIGGER_SQUARE: {
       const {steps} = state
       let {squares, topList} = state
-      const {index} = action
+      const {index, name} = action
       squares = recalculateSquares(squares, index)
       const newSteps = steps + 1
       const won = calculateWin(squares)
@@ -40,7 +40,7 @@ const board = (state = INITIAL_STATE, action) => {
         const newList = [
           ...list,
           {
-            play: list.length,
+            player: name,
             score: newSteps
           }
         ].sort((a, b) => a.score > b.score)

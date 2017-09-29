@@ -17,15 +17,15 @@ let TopList = ({topList, gameMode}) => {
               <thead >
                 <tr >
                   <th >Pos</th >
-                  <th >Play</th >
+                  <th >Name</th >
                   <th >Score</th >
                 </tr >
               </thead >
               <tbody >
                 {topList[gameMode].map((play, index) => (
-                  <tr key={play.play} className='is-size-5' >
+                  <tr key={index} className='is-size-5' >
                     <td >{index + 1}.</td >
-                    <td >{play.play}</td >
+                    <td >{play.player}</td >
                     <td >{play.score}</td >
                   </tr >
                 ))}
