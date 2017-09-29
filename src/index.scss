@@ -1,6 +1,11 @@
 @import "~normalize.css";
 @import "~bulma";
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 html {
   font-size: 12px;
+}
+
+body{
+  font-family: 'Raleway', sans-serif;
 }

@@ -5,7 +5,7 @@ const component = () => (
   <nav className='Header navbar is-dark' role='navigation' aria-label='main navigation' >
     <div className='navbar-brand' >
       <a className='navbar-item' href='https://raglopa.github.io/flip-react/' target='blank' >
-        flip-react
+        <span className='is-size-4'>flip-react</span>
       </a >
       <a className='navbar-item is-hidden-desktop' href={'https://github.com/raglopa/flip-react'} target='_blank' >
         <span className='icon' >
