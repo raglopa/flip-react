@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/raglopa/flip-react.svg?branch=master)](https://travis-ci.org/raglopa/flip-react)
+[![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/raglopa/flip-react)
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 
