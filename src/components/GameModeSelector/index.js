@@ -5,7 +5,6 @@ import './style.scss'
 import { selectGameMode } from './actions'
 
 const mapStateToProps = state => ({gameMode: state.gameMode})
-const mapDispatchToProps = dispatch => ({onClick: mode => dispatch(selectGameMode(mode))})
 
 let GameModeSelector = ({gameMode, onClick}) => (
   <div className='GameModeSelector' >
@@ -25,7 +24,7 @@ let GameModeSelector = ({gameMode, onClick}) => (
 
 GameModeSelector = connect(
   mapStateToProps,
-  mapDispatchToProps
+  {onClick: selectGameMode}
 )(GameModeSelector)
 
 export default GameModeSelector

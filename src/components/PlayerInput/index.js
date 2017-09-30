@@ -8,7 +8,8 @@ let PlayerInput = ({player, onChange}) => (
   <div className='PlayerInput' >
     <div className='field' >
       <div className='control has-icons-left' >
-        <input className='input ' type='text' placeholder='Tell me your name' onChange={(event) => onChange(event.target.value)} />
+        <input className='input' type='text' placeholder='Tell me your name'
+          onChange={(event) => onChange(event.target.value)} />
         <span className='icon is-small is-left' >
           <i className='fa fa-user' />
         </span >
@@ -19,7 +20,7 @@ let PlayerInput = ({player, onChange}) => (
 
 PlayerInput = connect(
   (state) => ({player: state.player}),
-  (dispatch) => ({onChange: name => dispatch(changeName(name))})
+  {onChange: changeName}
 )(PlayerInput)
 
 export default PlayerInput

@@ -10,10 +10,6 @@ const mapStateToProps = state => ({
   player: state.player
 })
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
-  onClick (id, name) { dispatch(triggerSquare(id, name)) }
-})
-
 let Board = ({board, player, onClick}) => {
   const {squares} = board
   const squareTable = reStructure(squares)
@@ -32,6 +28,9 @@ let Board = ({board, player, onClick}) => {
     </div >)
 }
 
-Board = connect(mapStateToProps, mapDispatchToProps)(Board)
+Board = connect(
+  mapStateToProps,
+  {onClick: triggerSquare}
+)(Board)
 
 export default Board
