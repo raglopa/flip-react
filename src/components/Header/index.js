@@ -1,43 +1,41 @@
 import React from 'react'
 import './style.scss'
+import { connect } from 'react-redux'
 
-const component = () => (
+const mapStateToProps = state => ({
+  header: state.header
+})
+
+let Header = ({header}) => (
   <nav className='Header navbar is-dark' role='navigation' aria-label='main navigation' >
     <div className='navbar-brand' >
       <a className='navbar-item' href='https://github.com/raglopa/flip-react' >
         <span className='is-size-4' >flip-react</span >
       </a >
-      <a className='navbar-item is-hidden-desktop' href={'https://github.com/raglopa/flip-react'} target='_blank' >
-        <span className='icon' >
-          <i className='fa fa-2x fa-github' />
-        </span >
-      </a >
-      <a className='navbar-item is-hidden-desktop' href={'https://www.linkedin.com/in/attilapolgar/'} target='_blank' >
-        <span className='icon' >
-          <i className='fa fa-2x fa-linkedin-square' />
-        </span >
-      </a >
-
+      {header.navLinks.map(link => (
+        <a className='navbar-item is-hidden-desktop' href={link.url} target='_blank' >
+          <span className='icon' >
+            <i className={`fa fa-2x ${link.icon}`} />
+          </span >
+        </a >
+      ))}
     </div >
     <div className='navbar-menu' >
       <div className='navbar-end' >
-        <div className='navbar-item' >
-          <a className={''} href={'https://github.com/raglopa/flip-react'} target='_blank' >
-            <span className={'icon'} >
-              <i className='fa fa-2x fa-github' />
-            </span >
-          </a >
-        </div >
-        <div className='navbar-item' >
-          <a className={''} href={'https://www.linkedin.com/in/attilapolgar/'} target='_blank' >
-            <span className={'icon'} >
-              <i className='fa fa-2x fa-linkedin-square' />
-            </span >
-          </a >
-        </div >
+        {header.navLinks.map(link => (
+          <div className='navbar-item' key={link.icon} >
+            <a className={''} href={link.url} target='_blank' >
+              <span className='icon' >
+                <i className={`fa fa-2x ${link.icon}`} />
+              </span >
+            </a >
+          </div >
+        ))}
       </div >
     </div >
   </nav >
 )
 
-export default component
+Header = connect(mapStateToProps, null)(Header)
+
+export default Header

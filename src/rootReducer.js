@@ -4,11 +4,13 @@ import topListReducers from './components/TopList/reducers'
 import gameModeReducers from './components/GameModeSelector/reducers'
 import heroReducers from './components/Hero/reducers'
 import playerReducers from './components/PlayerInput/reducers'
+import headerReducers from './components/Header/reducers'
 
 export default combineReducers({
   ...boardReducers,
   ...topListReducers,
   ...gameModeReducers,
   ...heroReducers,
-  ...playerReducers
+  ...playerReducers,
+  ...headerReducers
 })
