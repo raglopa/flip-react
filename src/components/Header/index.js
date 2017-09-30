@@ -4,7 +4,7 @@ import './style.scss'
 const component = () => (
   <nav className='Header navbar is-dark' role='navigation' aria-label='main navigation' >
     <div className='navbar-brand' >
-      <a className='navbar-item' href='/' >
+      <a className='navbar-item' href='https://github.com/raglopa/flip-react' >
         <span className='is-size-4' >flip-react</span >
       </a >
       <a className='navbar-item is-hidden-desktop' href={'https://github.com/raglopa/flip-react'} target='_blank' >
@@ -29,7 +29,7 @@ const component = () => (
           </a >
         </div >
         <div className='navbar-item' >
-          <a className={''} href={'\'https://www.linkedin.com/in/attilapolgar/\''} target='_blank' >
+          <a className={''} href={'https://www.linkedin.com/in/attilapolgar/'} target='_blank' >
             <span className={'icon'} >
               <i className='fa fa-2x fa-linkedin-square' />
             </span >
