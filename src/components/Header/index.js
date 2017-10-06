@@ -13,7 +13,7 @@ let Header = ({header}) => (
         <span className='is-size-4' >flip-react</span >
       </a >
       {header.navLinks.map(link => (
-        <a className='navbar-item is-hidden-desktop' href={link.url} target='_blank' >
+        <a className='navbar-item is-hidden-desktop' key={link.icon} href={link.url} target='_blank' >
           <span className='icon' >
             <i className={`fa fa-2x ${link.icon}`} />
           </span >
