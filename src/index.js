@@ -7,6 +7,8 @@ import ReactGA from 'react-ga'
 import 'font-awesome/scss/font-awesome.scss'
 
 ReactGA.initialize('UA-107710846-1')
+ReactGA.set({page: window.location.pathname + window.location.search})
+ReactGA.pageview(window.location.pathname + window.location.search)
 
 const store = configureStore()
 
