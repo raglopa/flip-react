@@ -8,7 +8,6 @@ const INITIAL_STATE = {
       url: 'https://www.linkedin.com/in/attilapolgar/',
       icon: 'fa-linkedin-square'
     }
-
   ]
 }
 const header = (state = INITIAL_STATE, action) => {

@@ -41,17 +41,16 @@ export const generateSquares = (amount = DEFAULT_SQUARES) => {
     .reduce((item, acc) => acc.concat(item))
 
   const shuffledLetters = shuffle(doubledLetters)
-  return new Array(pairs * 2).fill(null).map((v, i) => (
-    {
-      isFlipped: false,
-      isFound: false,
-      value: shuffledLetters[i],
-      id: i
-    }
-  ))
+  return new Array(pairs * 2).fill(null).map((v, i) => ({
+    isFlipped: false,
+    isFound: false,
+    value: shuffledLetters[i],
+    id: i
+  }))
 }
 
-export const calculateWin = (squares) => squares.filter(square => !square.isFound).length === 0
+export const calculateWin = squares =>
+  squares.filter(square => !square.isFound).length === 0
 
 /**
  * Flips one square by index
@@ -68,25 +67,40 @@ export const flipSquare = (squares, index) => [
   ...squares.slice(index + 1, squares.length)
 ]
 
-export const getFlippedAndNotFoundSquares = squares => squares.filter(square => square.isFlipped && !square.isFound)
+export const getFlippedAndNotFoundSquares = squares =>
+  squares.filter(square => square.isFlipped && !square.isFound)
 export const isSquareMatch = squares => squares[0].value === squares[1].value
-export const flipBackAllNotFound = squares => squares.map(square => Object.assign({}, square, {isFlipped: square.isFound}))
-export const markFoundFlippedSquares = squares => squares.map(square => Object.assign({}, square, {isFound: square.isFlipped}))
+export const flipBackAllNotFound = squares =>
+  squares.map(square =>
+    Object.assign({}, square, { isFlipped: square.isFound })
+  )
+export const markFoundFlippedSquares = squares =>
+  squares.map(square =>
+    Object.assign({}, square, { isFound: square.isFlipped })
+  )
 export const recalculateSquares = (squares, i) => {
   let newSquares = squares.slice()
   let match = false
   if (!newSquares[i].isFlipped) {
     let flippedAndNotFoundSquares = getFlippedAndNotFoundSquares(newSquares)
-    match = flippedAndNotFoundSquares.length === 2 && isSquareMatch(flippedAndNotFoundSquares)
+    match =
+      flippedAndNotFoundSquares.length === 2 &&
+      isSquareMatch(flippedAndNotFoundSquares)
 
-    if (flippedAndNotFoundSquares.length < 2) newSquares = flipSquare(newSquares, i)
+    if (flippedAndNotFoundSquares.length < 2) {
+      newSquares = flipSquare(newSquares, i)
+    }
 
     if (flippedAndNotFoundSquares.length === 2) {
-      newSquares = match ? flipSquare(newSquares, i) : flipBackAllNotFound(newSquares)
+      newSquares = match
+        ? flipSquare(newSquares, i)
+        : flipBackAllNotFound(newSquares)
     }
 
     flippedAndNotFoundSquares = getFlippedAndNotFoundSquares(newSquares)
-    match = flippedAndNotFoundSquares.length === 2 && isSquareMatch(flippedAndNotFoundSquares)
+    match =
+      flippedAndNotFoundSquares.length === 2 &&
+      isSquareMatch(flippedAndNotFoundSquares)
 
     if (match) newSquares = markFoundFlippedSquares(newSquares)
   } else {

@@ -7,26 +7,24 @@ import App from './App'
 import Header from './Header'
 import Footer from './Footer'
 
-const Root = ({store}) => (
-  <Provider store={store} >
-    <div className='Root' >
+const Root = ({ store }) => (
+  <Provider store={store}>
+    <div className='Root'>
       <Header />
-      <Router >
-        <div className='content' >
+      <Router>
+        <div className='content'>
           <Route path='/' component={App} />
-        </div >
-      </Router >
+        </div>
+      </Router>
       <Footer />
-    </div >
-  </Provider >
+    </div>
+  </Provider>
 )
 
 const propTypes = {
   store: PropTypes.object.isRequired
 }
 
-const enhance = compose(
-  setPropTypes(propTypes)
-)
+const enhance = compose(setPropTypes(propTypes))
 
 export default enhance(Root)

@@ -9,7 +9,7 @@ const INITIAL_STATE = {
 const player = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case CHANGE_NAME: {
-      const {name} = action
+      const { name } = action
       console.log('name', name, action)
       return {
         ...state,

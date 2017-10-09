@@ -10,27 +10,26 @@ const mapStateToProps = state => ({
   player: state.player
 })
 
-let Board = ({board, player, onClick}) => {
-  const {squares} = board
+let Board = ({ board, player, onClick }) => {
+  const { squares } = board
   const squareTable = reStructure(squares)
   return (
-    <div className={'Board'} >
-      {squareTable.map((row, i) =>
-        <div className='board-row' key={i} >
-          {row.map(square =>
+    <div className={'Board'}>
+      {squareTable.map((row, i) => (
+        <div className='board-row' key={i}>
+          {row.map(square => (
             <Square
               key={square.id}
               {...square}
               onClick={() => onClick(square.id, player.name)}
-            />)}
-        </div >
-      )}
-    </div >)
+            />
+          ))}
+        </div>
+      ))}
+    </div>
+  )
 }
 
-Board = connect(
-  mapStateToProps,
-  {onClick: triggerSquare}
-)(Board)
+Board = connect(mapStateToProps, { onClick: triggerSquare })(Board)
 
 export default Board

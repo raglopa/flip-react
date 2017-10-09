@@ -25,20 +25,12 @@ describe('generateSquares', () => {
 describe('calculateWin', () => {
   test('should return true if all squares are flipped', () => {
     expect(
-      calculateWin([
-        {isFound: true},
-        {isFound: true},
-        {isFound: true}
-      ]))
-      .toBe(true)
+      calculateWin([{ isFound: true }, { isFound: true }, { isFound: true }])
+    ).toBe(true)
 
     expect(
-      calculateWin([
-        {isFound: true},
-        {isFound: true},
-        {isFound: false}
-      ]))
-      .toBe(false)
+      calculateWin([{ isFound: true }, { isFound: true }, { isFound: false }])
+    ).toBe(false)
   })
 })
 /*
@@ -50,14 +42,8 @@ describe('getFlippedAndNotFoundSquares', () => {
 
 describe('isSquareMatch', () => {
   test('should return true if the squares match', () => {
-    const caseNotMatch = [
-      {value: 'A'},
-      {value: 'B'}
-    ]
-    const caseMatch = [
-      {value: 'A'},
-      {value: 'A'}
-    ]
+    const caseNotMatch = [{ value: 'A' }, { value: 'B' }]
+    const caseMatch = [{ value: 'A' }, { value: 'A' }]
 
     expect(isSquareMatch(caseNotMatch)).toBe(false)
     expect(isSquareMatch(caseMatch)).toBe(true)
@@ -79,19 +65,19 @@ describe('initState', () => {
 describe('flipSquare', () => {
   test('should return squares with the flipped square', () => {
     const squares = [
-      {isFlipped: false},
-      {isFlipped: false},
-      {isFlipped: false},
-      {isFlipped: false}
+      { isFlipped: false },
+      { isFlipped: false },
+      { isFlipped: false },
+      { isFlipped: false }
     ]
 
     deepFreeze(squares)
 
     let expected = [
-      {isFlipped: false},
-      {isFlipped: false},
-      {isFlipped: true},
-      {isFlipped: false}
+      { isFlipped: false },
+      { isFlipped: false },
+      { isFlipped: true },
+      { isFlipped: false }
     ]
 
     let result = flipSquare(squares, 2)

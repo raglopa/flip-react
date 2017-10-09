@@ -10,12 +10,16 @@ const configureStore = () => {
 
   const logger = createLogger({})
 
-  const makeStore = initialState => createStore(rootReducer, persistedState, applyMiddleware(logger, ga))
+  const makeStore = initialState =>
+    createStore(rootReducer, persistedState, applyMiddleware(logger, ga))
   const store = makeStore()
 
-  store.subscribe(throttle(() => {
-    saveState(store.getState())
-  }), 1000)
+  store.subscribe(
+    throttle(() => {
+      saveState(store.getState())
+    }),
+    1000
+  )
 
   return store
 }

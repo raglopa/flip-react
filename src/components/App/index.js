@@ -9,15 +9,15 @@ import Hero from '../Hero'
 import PlayerInput from '../PlayerInput'
 
 let App = () => (
-  <div className='App' >
+  <div className='App'>
     <Hero />
-    <div className='game-board' >
+    <div className='game-board'>
       <PlayerInput />
       <GameModeSelector />
       <Board />
       <TopList />
-    </div >
-  </div >
+    </div>
+  </div>
 )
 
 App = connect()(App)

@@ -10,7 +10,7 @@ const INITIAL_STATE = {
 const gameMode = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case SELECT_GAME_MODE: {
-      const {gameMode} = action
+      const { gameMode } = action
       return {
         ...state,
         selectedGameMode: gameMode
