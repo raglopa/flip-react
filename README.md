@@ -3,6 +3,7 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/raglopa/flip-react/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/raglopa/flip-react/?branch=master)
 [![Dependency Status](https://www.versioneye.com/user/projects/59cecca615f0d770f0e1907f/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59cecca615f0d770f0e1907f)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 
 # flip-react

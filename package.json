@@ -11,8 +11,9 @@
     "pretest": "npm run lint",
     "test": "node scripts/test.js --env=jsdom",
     "predeploy": "npm run build",
-    "lint": "standard",
-    "deploy": "gh-pages -d build"
+    "lint": "prettier-standard 'src/**/*.js'",
+    "deploy": "gh-pages -d build",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "autoprefixer": "^7.1.4",
@@ -105,7 +106,10 @@
     ]
   },
   "devDependencies": {
-    "deep-freeze": "^0.0.1"
+    "deep-freeze": "^0.0.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.2.3",
+    "prettier-standard": "^7.0.1"
   },
   "standard": {
     "ignore": [
@@ -116,5 +120,13 @@
       "URL",
       "fetch"
     ]
+  },
+  "lint-staged": {
+    "linters": {
+      "src/**/*.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
   }
 }
