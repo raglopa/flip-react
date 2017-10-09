@@ -2,16 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { compose, setPropTypes } from 'recompose'
 import App from './App'
 import Header from './Header'
 import Footer from './Footer'
 
 const Root = ({store}) => (
   <Provider store={store} >
-    <div className='Root'>
+    <div className='Root' >
       <Header />
       <Router >
-        <div className='content'>
+        <div className='content' >
           <Route path='/' component={App} />
         </div >
       </Router >
@@ -20,8 +21,12 @@ const Root = ({store}) => (
   </Provider >
 )
 
-Root.propTypes = {
+const propTypes = {
   store: PropTypes.object.isRequired
 }
 
-export default Root
+const enhance = compose(
+  setPropTypes(propTypes)
+)
+
+export default enhance(Root)
