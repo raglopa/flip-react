@@ -10,7 +10,7 @@ let Hero = technologies => (
   <section className='Hero hero is-primary has-text-centered'>
     <div className='hero-body'>
       <div className='container'>
-        <h1 className='title is-size-1'>flip-react</h1>
+        <h1 className='title is-size-1'>lbd-react-memory-game</h1>
         <h2 className='subtitle'>
           example {'{memory game}'} app created and shipped with
         </h2>

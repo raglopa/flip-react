@@ -6,12 +6,12 @@ const Footer = () => (
     <div className={'container'}>
       <div className={'content has-text-centered'}>
         <p>
-          <strong>flip-react</strong> by <a>Attila Polgar</a>
+          <strong>lbd-react-memory-game</strong> by <a>Attila Polgar</a>
         </p>
         <div>
           <a
             className={'icon'}
-            href={'https://github.com/raglopa/flip-react'}
+            href={'https://github.com/raglopa/lbd-react-memory-game'}
             target='_blank'
           >
             <i className='fa fa-2x fa-github-square' />

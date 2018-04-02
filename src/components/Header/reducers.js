@@ -1,7 +1,7 @@
 const INITIAL_STATE = {
   navLinks: [
     {
-      url: 'https://github.com/raglopa/flip-react',
+      url: 'https://github.com/raglopa/lbd-react-memory-game',
       icon: 'fa-github'
     },
     {

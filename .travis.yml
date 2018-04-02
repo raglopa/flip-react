@@ -6,5 +6,5 @@ after_success:
  - git config --global user.name "raglopa"
  - git config --global user.email "raglopa@gmail.com"
  - git remote rm origin
- - git remote add origin https://raglopa:${GH_TOKEN}@github.com/raglopa/flip-react.git
+ - git remote add origin https://raglopa:${GH_TOKEN}@github.com/raglopa/lbd-react-memory-game.git
  - npm run deploy
