@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.scss'
+import './style.css'
 import readme from './README.md'
 
 const Readme = () => (

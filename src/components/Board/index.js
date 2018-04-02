@@ -1,7 +1,7 @@
 import React from 'react'
 import Square from './Square'
 import { connect } from 'react-redux'
-import './style.scss'
+import './style.css'
 import { reStructure } from '../utils'
 import { triggerSquare } from './actions'
 

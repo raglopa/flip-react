@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.scss'
+import './style.css'
 import classNames from 'classnames'
 
 const Square = ({ onClick, isFound, isFlipped, value }) => {

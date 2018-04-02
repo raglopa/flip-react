@@ -1,19 +1,18 @@
-@import "~normalize.css";
-@import "~bulma";
+@import 'normalize.css/normalize';
+@import 'bulma/bulma';
 @import url('https://fonts.googleapis.com/css?family=Raleway');
-
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 html {
-  font-size: 12px;
-
-  body {
-    font-family: 'Raleway', sans-serif;
-    .Root {
-      display: flex;
-      min-height: 100vh;
-      flex-direction: column;
-      .content {
-        flex: 1;
-      }
+    font-size: 12px;
+    body {
+        font-family: 'Raleway', sans-serif;
+        .Root {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            .content {
+                flex: 1;
+            }
+        }
     }
-  }
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.scss'
+import './style.css'
 import { connect } from 'react-redux'
 
 import Board from '../Board'

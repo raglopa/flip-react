@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.scss'
+import './style.css'
 
 const Footer = () => (
   <footer className='Footer footer is-size-5'>
