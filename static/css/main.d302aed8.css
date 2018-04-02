@@ -6944,8 +6944,8 @@ html {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url(/flip-react/static/media/fontawesome-webfont.674f50d2.eot);
-  src: url(/flip-react/static/media/fontawesome-webfont.674f50d2.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(/flip-react/static/media/fontawesome-webfont.af7ae505.woff2) format("woff2"), url(/flip-react/static/media/fontawesome-webfont.fee66e71.woff) format("woff"), url(/flip-react/static/media/fontawesome-webfont.b06871f2.ttf) format("truetype"), url(/flip-react/static/media/fontawesome-webfont.912ec66d.svg#fontawesomeregular) format("svg");
+  src: url(/lbd-react-memory-game/static/media/fontawesome-webfont.674f50d2.eot);
+  src: url(/lbd-react-memory-game/static/media/fontawesome-webfont.674f50d2.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(/lbd-react-memory-game/static/media/fontawesome-webfont.af7ae505.woff2) format("woff2"), url(/lbd-react-memory-game/static/media/fontawesome-webfont.fee66e71.woff) format("woff"), url(/lbd-react-memory-game/static/media/fontawesome-webfont.b06871f2.ttf) format("truetype"), url(/lbd-react-memory-game/static/media/fontawesome-webfont.912ec66d.svg#fontawesomeregular) format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -9265,4 +9265,4 @@ html {
   overflow: visible;
   clip: auto; }
 
-/*# sourceMappingURL=main.7f583363.css.map*/
+/*# sourceMappingURL=main.d302aed8.css.map*/
