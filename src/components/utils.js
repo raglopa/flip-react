@@ -34,7 +34,8 @@ export const generateSquares = (amount = DEFAULT_SQUARES) => {
     'react',
     'redux',
     'sass',
-    'webpack'
+    'webpack',
+    'vue'
   ]).slice(0, Math.floor(pairs))
   const doubledLetters = letters
     .map(l => [l, l])
