@@ -1,15 +1,14 @@
 const INITIAL_STATE = {
   technologies: [
-    'react',
-    'redux',
-    'recompose',
-    'es7',
-    'babel',
-    'webpack',
-    'sass',
-    'bulma',
-    'jest',
-    'travis'
+    "react",
+    "redux",
+    "es7",
+    "babel",
+    "webpack",
+    "sass",
+    "bulma",
+    "jest",
+    "travis"
   ]
 }
 const hero = (state = INITIAL_STATE, action) => {

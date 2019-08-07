@@ -1,4 +1,3 @@
-import deepFreeze from 'deep-freeze'
 import {
   recalculateSquares,
   markFoundFlippedSquares,
@@ -8,7 +7,7 @@ import {
   isSquareMatch,
   flipBackAllNotFound,
   flipSquare
-} from './utils'
+} from "./utils"
 /*
 describe('markFoundFlippedSquares', () => {
   test('should be tested', () => {
@@ -22,8 +21,8 @@ describe('generateSquares', () => {
   })
 }) */
 
-describe('calculateWin', () => {
-  test('should return true if all squares are flipped', () => {
+describe("calculateWin", () => {
+  test("should return true if all squares are flipped", () => {
     expect(
       calculateWin([{ isFound: true }, { isFound: true }, { isFound: true }])
     ).toBe(true)
@@ -40,10 +39,10 @@ describe('getFlippedAndNotFoundSquares', () => {
   })
 }) */
 
-describe('isSquareMatch', () => {
-  test('should return true if the squares match', () => {
-    const caseNotMatch = [{ value: 'A' }, { value: 'B' }]
-    const caseMatch = [{ value: 'A' }, { value: 'A' }]
+describe("isSquareMatch", () => {
+  test("should return true if the squares match", () => {
+    const caseNotMatch = [{ value: "A" }, { value: "B" }]
+    const caseMatch = [{ value: "A" }, { value: "A" }]
 
     expect(isSquareMatch(caseNotMatch)).toBe(false)
     expect(isSquareMatch(caseMatch)).toBe(true)
@@ -62,16 +61,14 @@ describe('initState', () => {
   })
 }) */
 
-describe('flipSquare', () => {
-  test('should return squares with the flipped square', () => {
+describe("flipSquare", () => {
+  test("should return squares with the flipped square", () => {
     const squares = [
       { isFlipped: false },
       { isFlipped: false },
       { isFlipped: false },
       { isFlipped: false }
     ]
-
-    deepFreeze(squares)
 
     let expected = [
       { isFlipped: false },
@@ -93,7 +90,7 @@ describe('recalculateSquares', () => {
 })
 */
 
-import { reStructure, shuffleArray } from './utils'
+import { reStructure, shuffleArray } from "./utils"
 /*
 
 describe('reStructure', ()=>{
