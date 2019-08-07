@@ -1,6 +1,6 @@
-import { TRIGGER_SQUARE, SELECT_GAME_MODE } from './actions'
+import { TRIGGER_SQUARE, SELECT_GAME_MODE } from "./actions"
 
-import { recalculateSquares, generateSquares, calculateWin } from '../utils'
+import { recalculateSquares, generateSquares, calculateWin } from "../utils"
 
 const initializeState = (mode = 16) => ({
   squares: generateSquares(mode),
@@ -14,7 +14,7 @@ const INITIAL_STATE = initializeState()
 const board = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case SELECT_GAME_MODE: {
-      const { gameMode } = action
+      const { payload: gameMode } = action
       return {
         ...state,
         squares: generateSquares(gameMode),
@@ -32,7 +32,7 @@ const board = (state = INITIAL_STATE, action) => {
       const won = calculateWin(squares)
 
       if (won) {
-        const list = Object.keys(topList).includes('' + squares.length)
+        const list = Object.keys(topList).includes("" + squares.length)
           ? topList[squares.length]
           : []
         const newList = [
