@@ -1,6 +1,6 @@
-import React from 'react'
-import './style.css'
-import { connect } from 'react-redux'
+import React from "react"
+import "./style.scss"
+import { connect } from "react-redux"
 
 const mapStateToProps = state => ({
   header: state.header
@@ -8,36 +8,36 @@ const mapStateToProps = state => ({
 
 let Header = ({ header }) => (
   <nav
-    className='Header navbar is-dark'
-    role='navigation'
-    aria-label='main navigation'
+    className="Header navbar is-dark"
+    role="navigation"
+    aria-label="main navigation"
   >
-    <div className='navbar-brand'>
+    <div className="navbar-brand">
       <a
-        className='navbar-item'
-        href='https://github.com/raglopa/lbd-react-memory-game'
+        className="navbar-item"
+        href="https://github.com/raglopa/lbd-react-memory-game"
       >
-        <span className='is-size-4'>lbd-react-memory-game</span>
+        <span className="is-size-4">lbd-react-memory-game</span>
       </a>
       {header.navLinks.map(link => (
         <a
-          className='navbar-item is-hidden-desktop'
+          className="navbar-item is-hidden-desktop"
           key={link.icon}
           href={link.url}
-          target='_blank'
+          target="_blank"
         >
-          <span className='icon'>
+          <span className="icon">
             <i className={`fa fa-2x ${link.icon}`} />
           </span>
         </a>
       ))}
     </div>
-    <div className='navbar-menu'>
-      <div className='navbar-end'>
+    <div className="navbar-menu">
+      <div className="navbar-end">
         {header.navLinks.map(link => (
-          <div className='navbar-item' key={link.icon}>
-            <a className={''} href={link.url} target='_blank'>
-              <span className='icon'>
+          <div className="navbar-item" key={link.icon}>
+            <a className={""} href={link.url} target="_blank">
+              <span className="icon">
                 <i className={`fa fa-2x ${link.icon}`} />
               </span>
             </a>
@@ -48,6 +48,9 @@ let Header = ({ header }) => (
   </nav>
 )
 
-Header = connect(mapStateToProps, null)(Header)
+Header = connect(
+  mapStateToProps,
+  null
+)(Header)
 
 export default Header
