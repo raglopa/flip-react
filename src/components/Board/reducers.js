@@ -1,6 +1,7 @@
-import { TRIGGER_SQUARE, SELECT_GAME_MODE } from "./actions"
+import { TRIGGER_SQUARE } from "./actions"
 
 import { recalculateSquares, generateSquares, calculateWin } from "../utils"
+import { SELECT_GAME_MODE } from "../GameModeSelector/reducers"
 
 const initializeState = (mode = 16) => ({
   squares: generateSquares(mode),
