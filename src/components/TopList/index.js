@@ -1,6 +1,6 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import './style.css'
+import React from "react"
+import { connect } from "react-redux"
+import "./style.scss"
 
 const mapStateToProps = state => ({
   topList: state.board.topList,
@@ -9,10 +9,10 @@ const mapStateToProps = state => ({
 
 let TopList = ({ topList, gameMode }) => {
   return (
-    <div className='TopList'>
+    <div className="TopList">
       {topList[gameMode] ? (
         <div>
-          <table className='table is-striped is-narrow'>
+          <table className="table is-striped is-narrow">
             <thead>
               <tr>
                 <th>Pos</th>
@@ -22,7 +22,7 @@ let TopList = ({ topList, gameMode }) => {
             </thead>
             <tbody>
               {topList[gameMode].map((play, index) => (
-                <tr key={index} className='is-size-5'>
+                <tr key={index} className="is-size-5">
                   <td>{index + 1}.</td>
                   <td>{play.player}</td>
                   <td>{play.score}</td>
@@ -38,6 +38,9 @@ let TopList = ({ topList, gameMode }) => {
   )
 }
 
-TopList = connect(mapStateToProps, null)(TopList)
+TopList = connect(
+  mapStateToProps,
+  null
+)(TopList)
 
 export default TopList

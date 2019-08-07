@@ -1,6 +1,6 @@
-import React from 'react'
-import './style.css'
-import classNames from 'classnames'
+import React from "react"
+import "./style.scss"
+import classNames from "classnames"
 
 const Square = ({ onClick, isFound, isFlipped, value }) => {
   const squareClass = classNames({
@@ -9,14 +9,14 @@ const Square = ({ onClick, isFound, isFlipped, value }) => {
     flipped: isFlipped
   })
   const divStyle = {
-    backgroundImage: `url(${require('./images/' + value + '.png')})`
+    backgroundImage: `url(${require("./images/" + value + ".png")})`
   }
   return (
     <div
       className={squareClass}
       onClick={() => (!isFlipped ? onClick() : () => {})}
     >
-      <div className={'inner'} style={divStyle} />
+      <div className={"inner"} style={divStyle} />
     </div>
   )
 }
