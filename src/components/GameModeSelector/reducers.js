@@ -1,27 +1,20 @@
-import { SELECT_GAME_MODE } from './actions'
+import { createActions, handleActions } from "redux-actions"
 
-import {} from '../utils'
-
-const INITIAL_STATE = {
+const defaultState = {
   gameModes: [4, 16, 24],
   selectedGameMode: 16
 }
 
-const gameMode = (state = INITIAL_STATE, action) => {
-  switch (action.type) {
-    case SELECT_GAME_MODE: {
-      const { gameMode } = action
-      return {
-        ...state,
-        selectedGameMode: gameMode
-      }
-    }
+export const SELECT_GAME_MODE = "SELECT_GAME_MODE"
 
-    default:
-      return state
-  }
-}
+export const { selectGameMode } = createActions({}, SELECT_GAME_MODE)
 
-export default {
-  gameMode
-}
+export default handleActions(
+  {
+    [SELECT_GAME_MODE]: (state, { payload }) => ({
+      ...state,
+      selectedGameMode: payload
+    })
+  },
+  defaultState
+)
